@@ -16,4 +16,16 @@ public class ColorPoint extends Point {
         this.y = y;
 
     }
+
+    public int getRed() {
+        return red;
+    }
+
+    public int getBlue() {
+        return blue;
+    }
+
+    public int getGreen() {
+        return green;
+    }
 }
