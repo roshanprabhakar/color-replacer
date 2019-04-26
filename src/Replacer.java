@@ -16,7 +16,7 @@ public class Replacer {
         for (int r = 0; r < image.getHeight(); r++) {
             for (int c = 0; c < image.getWidth(); c++) {
                 Color pixel = new Color(image.getRGB(c, r));
-                CUBE[pixel.getRed()][pixel.getBlue()][pixel.getGreen()] =
+                CUBE[pixel.getRed()][pixel.getGreen()][pixel.getBlue()] =
                         new ColorPoint(pixel.getRed(), pixel.getGreen(), pixel.getBlue(), c, r);
             }
         }

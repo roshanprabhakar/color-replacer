@@ -17,6 +17,14 @@ public class ColorPoint extends Point {
 
     }
 
+    public double distanceTo(ColorPoint otherPoint) {
+        return Math.sqrt(
+                        (red - otherPoint.getRed()) * (red - otherPoint.getRed()) +
+                        (green - otherPoint.getGreen()) * (green - otherPoint.getGreen()) +
+                        (blue - otherPoint.getBlue()) * (blue - otherPoint.getBlue())
+        );
+    }
+
     public int getRed() {
         return red;
     }
