@@ -99,6 +99,10 @@ public class ClusterFinder {
         }
     }
 
+    private ArrayList<ColorPoint> getCenterPositions() {
+        return null; //to implement
+    }
+
     private void updateImage() {
         for (Cluster cluster : clusters) {
             for (ColorPoint p : cluster.getPoints()) {
@@ -113,6 +117,15 @@ public class ClusterFinder {
         frame.getContentPane().add(new JLabel(new ImageIcon(image)));
         frame.pack();
         frame.setVisible(true);
+    }
+
+    public void writeToFile(String path) {
+        File outputfile = new File(path);
+        try {
+            ImageIO.write(image, "jpg", outputfile);
+        } catch (IOException e) {
+            System.out.println("could not setup file");
+        }
     }
 
     public void resizeImage(int newW) {
