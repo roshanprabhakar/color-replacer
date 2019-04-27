@@ -19,11 +19,22 @@ public class ClusterFinder {
     private ColorPoint[][][] CUBE;
 
     public ClusterFinder(String path) {
+
         try {
             image = ImageIO.read(new File(path));
         } catch (IOException e) {
             e.printStackTrace();
         }
+        initCUBE();
+    }
+
+    public ClusterFinder(BufferedImage image) {
+
+        this.image = image;
+        initCUBE();
+    }
+
+    private void initCUBE() {
 
         CUBE = new ColorPoint[256][256][256];
         points = new ArrayList<>();
@@ -106,6 +117,15 @@ public class ClusterFinder {
         frame.setVisible(true);
     }
 
+    public void resizeImage(int newW, int newH) {
+        Image tmp = image.getScaledInstance(newW, newH, Image.SCALE_SMOOTH);
+        BufferedImage dimg = new BufferedImage(newW, newH, BufferedImage.TYPE_INT_RGB);
+        Graphics2D g2d = dimg.createGraphics();
+        g2d.drawImage(tmp, 0, 0, null);
+        g2d.dispose();
+        image = dimg;
+    }
+
     public ArrayList<Cluster> getClusters() {
         return clusters;
     }
@@ -116,6 +136,10 @@ public class ClusterFinder {
 
     public ColorPoint[][][] getCUBE() {
         return CUBE;
+    }
+
+    public BufferedImage getImage() {
+        return this.image;
     }
 }
 
