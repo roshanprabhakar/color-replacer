@@ -62,4 +62,8 @@ public class ColorPoint extends Point {
     public Color getColor() {
         return new Color(r, g, b);
     }
+
+    public String toString() {
+        return "(" + r + ", " + g + ", " + b + ")";
+    }
 }

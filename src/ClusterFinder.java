@@ -41,11 +41,11 @@ public class ClusterFinder {
 
     private void assignPointsToClusters() {
         for (ColorPoint p : points) {
-            findClosestClusterTo(p).add(p);
+            closestCluster(p).add(p);
         }
     }
 
-    private Cluster findClosestClusterTo(ColorPoint p) {
+    public Cluster closestCluster(ColorPoint p) {
         double minDistance = 362;
         Cluster closestCluster = clusters.get(0);
         for (Cluster c : clusters) {
@@ -65,16 +65,29 @@ public class ClusterFinder {
         for (Cluster c : clusters) c.clear();
     }
 
-    public void colorizeImage(int clusterNum) {
+    public void colorizeImage(int clusterNum, boolean replacerNeeded, Color oldColor, Color newColor) {
+
         for (int i = 0; i < clusterNum; i++) {
             clusters.add(new Cluster(new ColorPoint((int) (Math.random() * 255), (int) (Math.random() * 255), (int) (Math.random() * 255), 0, 0)));
         }
+
         for (int rep = 0; rep < 100; rep++) {
             clearClusters();
             assignPointsToClusters();
             recalculateCenters();
         }
-        updateImage();
+
+        if (replacerNeeded) {
+            new Replacer(image, CUBE, this).replace(oldColor, newColor);
+        }
+
+        System.out.println(clusters.size());
+
+        for (Cluster cluster : clusters) {
+            for (ColorPoint point : cluster.getPoints()) {
+                image.setRGB((int) point.getX(), (int) point.getY(), point.getColor().getRGB());
+            }
+        }
     }
 
     private void updateImage() {
