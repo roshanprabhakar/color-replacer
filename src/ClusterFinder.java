@@ -92,8 +92,6 @@ public class ClusterFinder {
             new Replacer(image, CUBE, this).replace(oldColor, newColor);
         }
 
-        System.out.println(clusters.size());
-
         for (Cluster cluster : clusters) {
             for (ColorPoint point : cluster.getPoints()) {
                 image.setRGB((int) point.getX(), (int) point.getY(), point.getColor().getRGB());
@@ -117,9 +115,9 @@ public class ClusterFinder {
         frame.setVisible(true);
     }
 
-    public void resizeImage(int newW, int newH) {
-        Image tmp = image.getScaledInstance(newW, newH, Image.SCALE_SMOOTH);
-        BufferedImage dimg = new BufferedImage(newW, newH, BufferedImage.TYPE_INT_RGB);
+    public void resizeImage(int newW) {
+        Image tmp = image.getScaledInstance(newW, image.getHeight() / image.getWidth() * newW, Image.SCALE_SMOOTH);
+        BufferedImage dimg = new BufferedImage(newW, image.getHeight() / image.getWidth() * newW, BufferedImage.TYPE_INT_RGB);
         Graphics2D g2d = dimg.createGraphics();
         g2d.drawImage(tmp, 0, 0, null);
         g2d.dispose();

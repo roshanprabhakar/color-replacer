@@ -10,7 +10,7 @@ public class Main {
         ClusterFinder secondNode = new ClusterFinder(finder.getImage());
         secondNode.colorizeImage(2, true, Color.BLACK, Color.WHITE);
 
-        secondNode.resizeImage(300, 320);
+        secondNode.resizeImage(300);
         secondNode.displayImage();
 
 
