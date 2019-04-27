@@ -2,41 +2,43 @@ import java.util.ArrayList;
 
 public class Cluster {
 
-    ArrayList<ColorPoint> points;
-    ColorPoint center;
+    private ArrayList<ColorPoint> points;
+    private ColorPoint center; //all points converted to this color
 
-    public Cluster() {
+    public Cluster(ColorPoint center) {
         points = new ArrayList<>();
+        this.center = center;
     }
 
-    public void addPoint(ColorPoint point) {
-        points.add(point);
+    public ArrayList<ColorPoint> getPoints() {
+        return points;
     }
 
-    public void removePoint(ColorPoint point) {
-        points.remove(point);
+    public ColorPoint getCenter() {
+        return this.center;
+    }
+
+    public void setCenter(ColorPoint p) {
+        this.center = p;
     }
 
     public void clear() {
         points.clear();
     }
 
-    public void calculateCenter() {
-
-        int sumR = 0;
-        int sumG = 0;
-        int sumB = 0;
-
-        for (ColorPoint point : points) {
-            sumR += point.getRed();
-            sumG += point.getGreen();
-            sumB += point.getBlue();
-        }
-
-        center = new ColorPoint(sumR / points.size(),
-                sumG / points.size(), sumB / points.size(), 0, 0);
+    public void add(ColorPoint p) {
+        points.add(p);
     }
 
-
-
+    public void recalculateCenter() {
+        int sumx = 0, sumy = 0, sumz = 0;
+        for (ColorPoint cp : points) {
+            sumx += cp.getR();
+            sumy += cp.getG();
+            sumz += cp.getB();
+        }
+        center.setR(sumx / points.size());
+        center.setG(sumy / points.size());
+        center.setB(sumz / points.size());
+    }
 }
