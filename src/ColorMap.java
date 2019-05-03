@@ -11,6 +11,10 @@ public class ColorMap {
         map = new HashMap<>();
     }
 
+    public ArrayList<Color> getList() {
+        return new ArrayList<>(map.keySet());
+    }
+
     public void put(Color c, ColorPoint p) {
         if (!containsColor(c)) map.put(c, new ArrayList<>());
         map.get(getMapObject(c)).add(p);

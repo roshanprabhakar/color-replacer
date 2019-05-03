@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ClusterFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClusterFinder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ColorMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ColorMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,36 +32,36 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="java" value="16" />
-          <entry key="png" value="5" />
+          <entry key="png" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Image" value="5" />
+          <entry key="Image" value="7" />
           <entry key="JAVA" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="11330" />
-          <entry key="txt" value="494" />
+          <entry key="java" value="11914" />
+          <entry key="txt" value="559" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="11330" />
-          <entry key="PLAIN_TEXT" value="494" />
+          <entry key="JAVA" value="11914" />
+          <entry key="PLAIN_TEXT" value="559" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="65" selection-start-line="8" selection-start-column="65" selection-end-line="8" selection-end-column="65" />
+              <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -70,11 +71,20 @@
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logo.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ClusterFinder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="92" column="9" lean-forward="true" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
+            <state relative-caret-position="172">
+              <caret line="156" column="25" selection-start-line="156" selection-start-column="25" selection-end-line="156" selection-end-column="25" />
+              <folding>
+                <element signature="e#2311#2312#0" expanded="true" />
+                <element signature="e#2363#2364#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,12 +92,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ColorMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
+            <state relative-caret-position="210">
+              <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#178#179#0" expanded="true" />
                 <element signature="e#215#216#0" expanded="true" />
+                <element signature="e#281#282#0" expanded="true" />
+                <element signature="e#318#319#0" expanded="true" />
                 <element signature="e#1239#1240#0" expanded="true" />
                 <element signature="e#1274#1275#0" expanded="true" />
                 <element signature="e#1215#1216#0" expanded="true" />
@@ -152,11 +164,11 @@
         <option value="$PROJECT_DIR$/src/Replacer.java" />
         <option value="$PROJECT_DIR$/src/ColorPoint.java" />
         <option value="$PROJECT_DIR$/src/Cluster.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/ColorHashMap.java" />
         <option value="$PROJECT_DIR$/src/tesst.java" />
         <option value="$PROJECT_DIR$/src/ColorMap.java" />
         <option value="$PROJECT_DIR$/src/ClusterFinder.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -199,7 +211,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556917688803" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556919435536" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -257,7 +269,7 @@
       <workItem from="1556818360674" duration="6345000" />
       <workItem from="1556856338170" duration="4592000" />
       <workItem from="1556900866280" duration="41000" />
-      <workItem from="1556917316231" duration="372000" />
+      <workItem from="1556917316231" duration="2194000" />
     </task>
     <task id="LOCAL-00001" summary="added calculate center method">
       <created>1556250123429</created>
@@ -329,17 +341,31 @@
       <option name="project" value="LOCAL" />
       <updated>1556865096383</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="fully implemented Color map">
+      <created>1556917720618</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1556917720618</updated>
+    </task>
+    <task id="LOCAL-00012" summary="added safety check for numClusters">
+      <created>1556917730980</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1556917730980</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26523000" />
+    <option name="totallyTimeSpent" value="28345000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17453505" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17453505" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -349,7 +375,7 @@
       <window_info anchor="bottom" id="Messages" order="0" weight="0.32920793" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49928468" weight="0.26732674" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.49928468" visible="true" weight="0.26732674" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.39975247" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -389,7 +415,9 @@
     <MESSAGE value="note: increasing Cluster finder increases null pointer chance exponentially" />
     <MESSAGE value="implemented new Map object" />
     <MESSAGE value="updated color structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated color structure" />
+    <MESSAGE value="fully implemented Color map" />
+    <MESSAGE value="added safety check for numClusters" />
+    <option name="LAST_COMMIT_MESSAGE" value="added safety check for numClusters" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/src.zip!/java/awt/Point.java">
@@ -405,9 +433,6 @@
           <caret line="125" column="30" selection-start-line="125" selection-start-column="30" selection-end-line="125" selection-end-column="33" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logo.png">
-      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/src.zip!/java/util/HashMap.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -425,16 +450,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ColorHashMap.java" />
     <entry file="file://$PROJECT_DIR$/src/tesst.java" />
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="65" selection-start-line="8" selection-start-column="65" selection-end-line="8" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/outFile.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Replacer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -461,12 +476,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ColorMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
+        <state relative-caret-position="210">
+          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#178#179#0" expanded="true" />
             <element signature="e#215#216#0" expanded="true" />
+            <element signature="e#281#282#0" expanded="true" />
+            <element signature="e#318#319#0" expanded="true" />
             <element signature="e#1239#1240#0" expanded="true" />
             <element signature="e#1274#1275#0" expanded="true" />
             <element signature="e#1215#1216#0" expanded="true" />
@@ -477,8 +494,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ClusterFinder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="92" column="9" lean-forward="true" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
+        <state relative-caret-position="172">
+          <caret line="156" column="25" selection-start-line="156" selection-start-column="25" selection-end-line="156" selection-end-column="25" />
+          <folding>
+            <element signature="e#2311#2312#0" expanded="true" />
+            <element signature="e#2363#2364#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/outFile.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-end-line="9" />
         </state>
       </provider>
     </entry>

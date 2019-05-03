@@ -6,8 +6,8 @@ public class Main {
 
         ClusterFinder finder = new ClusterFinder("logo.png");
 
-        finder.colorizeImage(2, true, Color.ORANGE, Color.MAGENTA);
-        finder.resizeImage(1000);
+        finder.colorizeImage(4, true, Color.GREEN, Color.RED);
+        finder.resizeImage(400);
 
         finder.writeToFile("outFile.png");
     }

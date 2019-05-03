@@ -45,6 +45,8 @@ public class ClusterFinder {
         points = new ArrayList<>();
         clusters = new ArrayList<>();
 
+        int counter = 0;
+
         for (int row = 0; row < image.getHeight(); row++) {
             for (int col = 0; col < image.getWidth(); col++) {
 
@@ -54,6 +56,9 @@ public class ClusterFinder {
                         new ColorPoint(color.getRed(), color.getGreen(), color.getBlue(), col, row);
                 points.add(CUBE[color.getRed()][color.getGreen()][color.getBlue()]);
                 colorMap.put(color, CUBE[color.getRed()][color.getGreen()][color.getBlue()]);
+
+                System.out.println("adding point: " + counter + " out of " + image.getWidth() * image.getHeight());
+                counter++;
             }
         }
     }
@@ -90,14 +95,18 @@ public class ClusterFinder {
 
         if (numClusters > colorMap.size()) {
             System.out.println("There aren't " + numClusters + " different colors in this image!");
+            System.exit(0);
         }
 
         for (int i = 0; i < numClusters; i++) {
 
+            Color color = colorMap.getList().get((int)(Math.random() * colorMap.getList().size()));
+            clusters.add(new Cluster(colorMap.get(color).get((int)(Math.random() * colorMap.get(color).size()))));
 
+            System.out.println("Initialized cluster: " + i);
 
-            //change this so that it finds unique colors, hashmap of awtcolor to points
-            clusters.add(new Cluster(points.get((int)(Math.random() * points.size()))));
+//            //change this so that it finds unique colors, hashmap of awtcolor to points
+//            clusters.add(new Cluster(points.get((int)(Math.random() * points.size()))));
         }
 
         for (int rep = 0; rep < 100; rep++) {
@@ -105,6 +114,8 @@ public class ClusterFinder {
             clearClusters();
             assignPointsToClusters();
             recalculateCenters();
+
+            System.out.println("rep: " + rep);
         }
 
         if (replacerNeeded) {
