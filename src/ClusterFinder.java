@@ -35,7 +35,6 @@ public class ClusterFinder {
     }
 
     public ClusterFinder(BufferedImage image) {
-
         this.image = image;
         initCUBE();
     }
@@ -87,9 +86,14 @@ public class ClusterFinder {
         for (Cluster c : clusters) c.clear();
     }
 
-    public void colorizeImage(int clusterNum, boolean replacerNeeded, Color oldColor, Color newColor) {
+    public void colorizeImage(int numClusters, boolean replacerNeeded, Color oldColor, Color newColor) {
 
-        for (int i = 0; i < clusterNum; i++) {
+        if (numClusters > colorMap.size()) {
+            System.out.println("There aren't " + numClusters + " different colors in this image!");
+        }
+
+        for (int i = 0; i < numClusters; i++) {
+
 
 
             //change this so that it finds unique colors, hashmap of awtcolor to points
