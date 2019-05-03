@@ -9,6 +9,8 @@ import java.util.Scanner;
 
 public class ClusterFinder {
 
+    private ColorMap colorMap;
+
     private BufferedImage image;
     private ArrayList<Cluster> clusters;
     private ArrayList<ColorPoint> points;
@@ -21,12 +23,15 @@ public class ClusterFinder {
 
     public ClusterFinder(String path) {
 
+        colorMap = new ColorMap();
+
         try {
             image = ImageIO.read(new File(path));
         } catch (IOException e) {
             e.printStackTrace();
         }
         initCUBE();
+        System.out.println(colorMap);
     }
 
     public ClusterFinder(BufferedImage image) {
@@ -43,10 +48,13 @@ public class ClusterFinder {
 
         for (int row = 0; row < image.getHeight(); row++) {
             for (int col = 0; col < image.getWidth(); col++) {
+
                 Color color = new Color(image.getRGB(col, row));
+
                 CUBE[color.getRed()][color.getGreen()][color.getBlue()] =
                         new ColorPoint(color.getRed(), color.getGreen(), color.getBlue(), col, row);
                 points.add(CUBE[color.getRed()][color.getGreen()][color.getBlue()]);
+                colorMap.put(color, CUBE[color.getRed()][color.getGreen()][color.getBlue()]);
             }
         }
     }
@@ -82,6 +90,7 @@ public class ClusterFinder {
     public void colorizeImage(int clusterNum, boolean replacerNeeded, Color oldColor, Color newColor) {
 
         for (int i = 0; i < clusterNum; i++) {
+
 
             //change this so that it finds unique colors, hashmap of awtcolor to points
             clusters.add(new Cluster(points.get((int)(Math.random() * points.size()))));

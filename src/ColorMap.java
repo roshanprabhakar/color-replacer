@@ -6,8 +6,13 @@ public class ColorMap {
 
     private HashMap<Color, ArrayList<ColorPoint>> map;
 
+
     public ColorMap() {
         map = new HashMap<>();
+    }
+
+    public ArrayList<Color> getList() {
+        return new ArrayList<>(map.keySet());
     }
 
     public void put(Color c, ColorPoint p) {
@@ -37,5 +42,9 @@ public class ColorMap {
 
     public ArrayList<ColorPoint> get(Color c) {
         return map.get(c);
+    }
+
+    public String toString() {
+        return map.toString();
     }
 }
