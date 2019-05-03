@@ -10,6 +10,10 @@ public class Cluster {
         this.center = center;
     }
 
+    public int size() {
+        return points.size();
+    }
+
     public ArrayList<ColorPoint> getPoints() {
         return points;
     }
@@ -40,5 +44,9 @@ public class Cluster {
         center.setR(sumx / points.size());
         center.setG(sumy / points.size());
         center.setB(sumz / points.size());
+    }
+
+    public String toString() {
+        return "center: " + center + " points: " + points;
     }
 }

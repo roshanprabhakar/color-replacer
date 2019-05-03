@@ -5,6 +5,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class ClusterFinder {
 
@@ -69,7 +70,9 @@ public class ClusterFinder {
     }
 
     private void recalculateCenters() {
-        for (Cluster c : clusters) c.recalculateCenter();
+        for (Cluster c : clusters) {
+            c.recalculateCenter();
+        }
     }
 
     private void clearClusters() {
@@ -79,10 +82,13 @@ public class ClusterFinder {
     public void colorizeImage(int clusterNum, boolean replacerNeeded, Color oldColor, Color newColor) {
 
         for (int i = 0; i < clusterNum; i++) {
-            clusters.add(new Cluster(new ColorPoint((int) (Math.random() * 255), (int) (Math.random() * 255), (int) (Math.random() * 255), 0, 0)));
+
+            //change this so that it finds unique colors, hashmap of awtcolor to points
+            clusters.add(new Cluster(points.get((int)(Math.random() * points.size()))));
         }
 
         for (int rep = 0; rep < 100; rep++) {
+
             clearClusters();
             assignPointsToClusters();
             recalculateCenters();
@@ -97,10 +103,6 @@ public class ClusterFinder {
                 image.setRGB((int) point.getX(), (int) point.getY(), point.getColor().getRGB());
             }
         }
-    }
-
-    private ArrayList<ColorPoint> getCenterPositions() {
-        return null; //to implement
     }
 
     private void updateImage() {

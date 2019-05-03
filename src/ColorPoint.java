@@ -2,19 +2,9 @@ import java.awt.*;
 
 public class ColorPoint extends Point {
 
-    private Cluster cluster;
-
     private int r;
     private int g;
     private int b;
-
-    public Cluster getCluster() {
-        return this.cluster;
-    }
-
-    public void setCluster(Cluster c) {
-        cluster = c;
-    }
 
     public int getR() {
         return r;
@@ -46,6 +36,14 @@ public class ColorPoint extends Point {
         this.b = b;
         this.x = x;
         this.y = y;
+    }
+
+    public ColorPoint(ColorPoint other) {
+        this.r = other.getR();
+        this.g = other.getG();
+        this.b = other.getB();
+        this.x = (int) other.getX();
+        this.y = (int) other.getY();
     }
 
     public double distanceTo(ColorPoint other) {
