@@ -4,11 +4,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ClusterFinder finder = new ClusterFinder("logo.png");
+        ClusterFinder finder = new ClusterFinder("outFile.png");
 
-        finder.colorizeImage(4, true, Color.GREEN, Color.RED);
-        finder.resizeImage(400);
+        finder.colorizeImage(3,true, Color.ORANGE, Color.RED);
 
-        finder.writeToFile("outFile.png");
+        finder.writeToFile("outFile1.png");
     }
 }
