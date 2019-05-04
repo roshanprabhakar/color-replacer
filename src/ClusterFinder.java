@@ -57,7 +57,8 @@ public class ClusterFinder {
                 points.add(CUBE[color.getRed()][color.getGreen()][color.getBlue()]);
                 colorMap.put(color, CUBE[color.getRed()][color.getGreen()][color.getBlue()]);
 
-                System.out.println("adding point: " + counter + " out of " + image.getWidth() * image.getHeight());
+                System.out.println("adding ColorPoints: " + (int) (100 * ((double) (counter)) / (image.getWidth() * image.getHeight())) + "% complete");
+
                 counter++;
             }
         }
@@ -93,6 +94,8 @@ public class ClusterFinder {
 
     public void colorizeImage(int numClusters, boolean replacerNeeded, Color oldColor, Color newColor) {
 
+        String message;
+
         if (numClusters > colorMap.size()) {
             System.out.println("There aren't " + numClusters + " different colors in this image!");
             System.exit(0);
@@ -100,22 +103,22 @@ public class ClusterFinder {
 
         for (int i = 0; i < numClusters; i++) {
 
-            Color color = colorMap.getList().get((int)(Math.random() * colorMap.getList().size()));
-            clusters.add(new Cluster(colorMap.get(color).get((int)(Math.random() * colorMap.get(color).size()))));
+            Color color = colorMap.getList().get((int) (Math.random() * colorMap.getList().size()));
+            clusters.add(new Cluster(colorMap.get(color).get((int) (Math.random() * colorMap.get(color).size()))));
 
-            System.out.println("Initialized cluster: " + i);
+            System.out.println("Clusters: " + (int) ((double) (i + 1) / numClusters * 100) + "% initialized");
 
-//            //change this so that it finds unique colors, hashmap of awtcolor to points
-//            clusters.add(new Cluster(points.get((int)(Math.random() * points.size()))));
         }
 
+        message = "";
         for (int rep = 0; rep < 100; rep++) {
 
             clearClusters();
             assignPointsToClusters();
             recalculateCenters();
 
-            System.out.println("rep: " + rep);
+            System.out.println("finding clusters: " + (int) (((double) rep / 100) * 100) + "% complete");
+
         }
 
         if (replacerNeeded) {
@@ -161,6 +164,14 @@ public class ClusterFinder {
         g2d.drawImage(tmp, 0, 0, null);
         g2d.dispose();
         image = dimg;
+    }
+
+    private String repeatString(String string, int reps) {
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < reps; i++) {
+            builder.append(string);
+        }
+        return builder.toString();
     }
 
     public ArrayList<Cluster> getClusters() {
