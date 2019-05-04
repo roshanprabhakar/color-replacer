@@ -27,3 +27,5 @@ input of false would just find numCluseters clusters of colors.
 Color color1 is the color you want to replace, Color color2 is the color
 that needs replacing. Reference the Java api for usage of awt.Color
 
+####Note:
+the surrounding code defines input and output files. They can be the same.
