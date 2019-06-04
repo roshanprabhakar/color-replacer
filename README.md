@@ -28,4 +28,4 @@ Color color1 is the color you want to replace, Color color2 is the color
 that will replace color1. Reference the Java api for usage of awt.Color
 
 #### Note:
-the surrounding code defines input and output files. They can be the same.
+the surrounding code defines input and output image files. They can be the same.
